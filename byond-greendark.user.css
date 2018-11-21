@@ -1,0 +1,234 @@
+/* ==UserStyle==
+@name           BYOND GreenDark
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A greenish dark theme for BYOND.com
+@author         Tigercat2000
+==/UserStyle== */
+
+@-moz-document regexp("https?:\\/\\/(secure.)?byond\\.com\\/(?!docs).*") {
+    /* Config */
+    :root {
+        --link-on: #72dd95;
+        --link-off: #23867c;
+        --member: #2658bf;
+        --box-bg: #606c64;
+    }
+
+    /* Page Background */
+    body {
+        background: hsl(90, 2%, 13%);
+        color: white;
+    }
+    div#topbar_outer {
+        background: hsl(60, 2%, 30%);
+    }
+    .main_background {
+        background: hsl(20, 2%, 21%);
+        color: white;
+    }
+
+    /* Forum Rows */
+    .new_forum tr.forum_row.odd {
+        background: hsl(200, 3%, 15%);
+        color: white;
+    }
+    .new_forum tr.forum_row.even {
+        background: hsl(0, 0%, 18%);
+        color: white;
+    }
+
+    /* hyperlinks */
+    a {
+        color: var(--link-on);
+    }
+    .new_forum a.read {
+        color: var(--link-off);
+    }
+    .new_forum a.unread {
+        color: var(--link-on);
+    }
+
+    /* Tables */
+    .new_forum .navtable td {
+        background: #3a3431;
+    }
+    .new_forum tr.header {
+        background: #1f1f1f;
+    }
+    .new_forum table.forum_index > tbody > tr.forum_row > td:first-child,
+    .new_forum table.forum_page > tbody > tr.forum_row > td:first-child {
+        border: none;
+    }
+    .new_forum table.forum_index > tbody > tr.forum_row > td,
+    .new_forum table.forum_page > tbody > tr.forum_row > td {
+        border: none;
+        border-left: 1px solid #222;
+    }
+    .new_forum table.forum_index > tbody > tr > th,
+    .new_forum table.forum_page > tbody > tr > th {
+        border: none;
+    }
+    .new_forum .forum_category th {
+        background: #5c5f5a;
+    }
+    .new_forum tr.forum_vspacer td {
+        border: none;
+    }
+
+    /* Nav Buttons */
+    .new_forum a.forum_top_link_right,
+    .new_forum a.forum_top_link_left,
+    .buttons a.button {
+        background: #2a2c2b;
+    }
+    .new_forum a.forum_top_link_right:hover,
+    .new_forum a.forum_top_link_right.current_choice,
+    .new_forum a.forum_top_link_left:hover,
+    .new_forum a.forum_top_link_left.current_choice,
+    .buttons .button.current_choice,
+    .buttons a.button:hover {
+        background: #3a3c3b;
+    }
+    .new_forum a.forum_top_link_right,
+    .new_forum a.forum_top_link_left,
+    .buttons a.button {
+        border: none;
+    }
+    .page_number {
+        background: #222;
+        border: none;
+        user-select: none;
+    }
+    a.page_number:hover {
+        background: #333;
+    }
+    .page_number.current_page {
+        background: #121212;
+        border: none;
+    }
+    .forum_page_numbers_top {
+        cursor: default;
+    }
+    .forum_page_numbers_top a {
+        cursor: pointer;
+    }
+
+    /* Scoreboard */
+    .new_forum .scoreboard .scoreboard_table {
+        background: #2f2c2a;
+        color: #fff;
+    }
+    .title,
+    .box_title,
+    h3.title {
+        color: #fff;
+    }
+
+    /* Forum Posts */
+    .new_forum td.forum_entry_content {
+        background: var(--box-bg);
+        color: #fff;
+    }
+    .new_forum td.forum_entry_info {
+        background: #808e85;
+    }
+    .new_forum .forum_post_header {
+        background: #738278;
+    }
+    .new_forum table.forum_post_table > tbody > tr > td {
+        border: none;
+    }
+    .new_forum table.best_comment,
+    .new_forum table.tracker_comment {
+        box-shadow: none;
+    }
+    .new_forum .best_comment td.forum_entry_info,
+    .new_forum .best_comment td.forum_entry_content,
+    .new_forum .tracker_comment td.forum_entry_info,
+    .new_forum .tracker_comment td.forum_entry_content {
+        background: #4a7499;
+    }
+    .new_forum .best_response_total {
+        color: var(--member);
+    }
+
+    blockquote.comment_quote, blockquote.comment_quote blockquote.comment_quote blockquote.comment_quote {
+        background: black;
+    }
+    blockquote.comment_quote blockquote.comment_quote, blockquote.comment_quote blockquote.comment_quote blockquote.comment_quote blockquote.comment_quote {
+        background: #222;
+    }
+
+    .new_forum .tracker_issue td.forum_entry_content_top {
+        background: #7a8;
+    }
+
+    .new_forum div.poll {
+        background: black;
+    }
+
+    .big_box {
+        color: white;
+    }
+
+    .big_box:not(.no_bg) {
+        background-color: var(--box-bg);
+        color: white;
+    }
+    .box a, .big_box a, .popup_big_box a, .popup_box a {
+        color: var(--link-on)
+    }
+
+    .new_forum .tracker_issue_status_top {
+        color: white;
+    }
+
+    .box {
+        background: var(--box-bg);
+        border: none;
+        color: white;
+    }
+    body.popup .big_box > .box_content > .title, .box > .box_content > .title {
+        background: var(--box-bg);
+        color: white;
+    }
+    .big_box > .title, .box > .title, .big_box > .box_content > .title, .title.use_header {
+        background: var(--box-bg);
+        color: white;
+    }
+
+    td.search_result {
+        background: var(--box-bg);
+        border: none;
+        color: white;
+    }
+    .box#member_box .title {
+        background: var(--member);
+        border-bottom: none;
+    }
+    .box #member_box_bottom {
+        background: var(--member);
+        color: white;
+    }
+    div.live_game_entry {
+        color: white;
+    }
+    table.post_summary a, div.live_game_entry a {
+        color: var(--link-on);
+    }
+    td.hub_sidebyside, div.hub_fullbox {
+        background: var(--box-bg);
+        color: white;
+    }
+    table.hub_sidebyside p.title {
+        color: white;
+    }
+    div.hub_overview_box.type3, td.hub_overview_box.type3 {
+        background: var(--box-bg);
+        color: white
+    }
+    .box_content {
+        padding: 8px;
+    }
+}
