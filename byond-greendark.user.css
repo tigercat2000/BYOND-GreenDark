@@ -6,7 +6,7 @@
 @author         Tigercat2000
 ==/UserStyle== */
 
-@-moz-document regexp("https?:\\/\\/(secure.)?byond\\.com\\/(?!docs).*") {
+@-moz-document regexp("https?:\/\/(secure|www).byond\.com\/(?!docs).*") {
     /* Config */
     :root {
         --link-on: #72dd95;
